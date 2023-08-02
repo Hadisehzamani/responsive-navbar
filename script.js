@@ -10,10 +10,8 @@ navlinks.forEach(function (link) {
     link.addEventListener('click', function (e) {
         e.preventDefault();
         navlinks.forEach(function(item){
-            item.style.backgroundColor = '#11101b'
-            item.style.color = '#fefefe'
+            item.classList.remove('active')
         })
-        e.target.style.backgroundColor = '#fefefe'
-        e.target.style.color = '#11101b'
+        e.target.classList.add('active')
     });
 });
